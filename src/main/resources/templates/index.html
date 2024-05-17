@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD SPRING BOOT</title>
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Bienvenido al Crud</h1>
+
+        </div>
+        
+        <div class="card-container" th:unless="${loggedIn}">
+            <div class="card">
+                <a href="/propietario/login" class="btn"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</a>
+            </div>
+            <div class="card">
+                <a href="/propietario/registrar" class="btn"><i class="fas fa-user-plus"></i>Registrar</a>
+            </div>
+        </div>
+        
+        <div class="card-container" th:if="${loggedIn}">
+		<div class="card">
+                <a href="/propietario/listar" class="btn"><i class="fas fa-users"></i>Listar Propietarios</a>
+            </div>
+            <div class="card">
+                <a href="/finca/agregar" class="btn"><i class="fas fa-plus"></i>Agregar Fincas</a>
+            </div>
+            <div class="card">
+                <a href="/finca/listar" class="btn"><i class="fas fa-list"></i>Listar Fincas</a>
+            </div>
+            <div class="card">
+                <a href="/propietario/cerrarSesion" class="btn"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+            </div>
+        </div>
+        </div>
+       
+</body>
+</html>

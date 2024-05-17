@@ -1,0 +1,75 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8e8e8; /* Cambio de color de fondo */
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #ffffff; /* Cambio de color de fondo */
+    border-radius: 8px; /* Aumento del radio del borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cambio del efecto de sombra */
+}
+
+h1 {
+    font-size: 28px; /* Aumento del tamaño de fuente */
+    margin-bottom: 30px; /* Aumento del margen inferior */
+    color: #333333; /* Cambio de color de título */
+}
+
+form {
+    margin-bottom: 30px; /* Aumento del margen inferior */
+}
+
+.form-group {
+    margin-bottom: 30px; /* Aumento del margen inferior */
+}
+
+label {
+    font-weight: bold;
+    color: #555555; /* Cambio de color de etiqueta */
+}
+
+input[type="number"],
+input[type="clave"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px; /* Aumento del relleno */
+    border: 1px solid #dddddd; /* Cambio de color del borde */
+    border-radius: 5px;
+    font-size: 16px; /* Aumento del tamaño de fuente */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px; /* Ajuste del relleno */
+    background-color: #4CAF50; /* Cambio de color de fondo */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 16px; /* Aumento del tamaño de fuente */
+    margin-top: 15px; /* Aumento del margen superior */
+}
+
+.btn-container {
+    margin-top: 30px; /* Aumento del margen superior */
+    text-align: center; /* Centra los elementos dentro del contenedor */
+}

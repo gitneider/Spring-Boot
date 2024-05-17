@@ -1,0 +1,116 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: center;
+  background-color: #ebebeb; /* Cambio de color de fondo */
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff; /* Cambio de color de fondo */
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 28px;
+  color: #1a1a1a; /* Cambio de color de título */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+  color: #444444; /* Cambio de color de etiqueta */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc; /* Cambio de color del borde */
+  border-radius: 4px;
+  transition: border-color 0.3s ease; /* Transición para la apariencia de los campos */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #66afe9; /* Cambio de color del borde al enfocar */
+  box-shadow: 0 0 5px #66afe9; /* Agrega un resplandor al enfocar */
+}
+
+/* Estilo para el campo de género */
+.gender-select,
+.date-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px; /* Ajusta el espacio para el icono */
+  width: calc(100% - 30px); /* Ancho del campo menos el espacio para el icono */
+}
+
+.gender-select {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17h2v2h-2zm1-15c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm6 10h-2v-2h2v2z"/></svg>');
+}
+
+.date-select {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16 10.5V15h-2v-4.5a2.5 2.5 0 0 1 5 0zm-1-8a7 7 0 0 1 7 7 6.92 6.92 0 0 1-1.638 4.406l-1.962-1.962A3.49 3.49 0 0 0 18 11.5a3.5 3.5 0 1 0-7 0 3.49 3.49 0 0 0 .538-1.831L8.361 15H5a2 2 0 0 0-2 2v2h2v2H3v2h2v2h2v-2h2v2h2v-2h-2v-2a2 2 0 0 0-2-2h3.361l2.792-2.791A6.968 6.968 0 0 1 23 10.5a7 7 0 0 1-7-7zm1 5H8.83l-1.38 1.38A4.475 4.475 0 0 1 7 11.5a4.5 4.5 0 1 1 9 0c0 .518-.096 1.011-.246 1.48l-1.379-1.38z"/></svg>');
+}
+
+.btn-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4CAF50; /* Cambio de color de botón */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+.success-message {
+  color: #28a745; /* Cambio de color de mensaje de éxito */
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #dc3545; /* Cambio de color de mensaje de error */
+  margin-top: 10px;
+}
+
+.error-label {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.fa {
+  margin-right: 5px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Fincas</title>
+    <link th:href="@{/css/listarF.css}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container">
+        <h1>Listado de Fincas</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar fincas...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>                  
+                    <th>Nombre</th>
+                    <th>Número de Hectáreas</th>
+                    <th>Metros Cuadrados</th>
+                    <th>Propietario</th>
+                    <th>Capataz</th>
+                    <th>País</th>
+                    <th>Departamento</th>
+                    <th>Ciudad</th>
+                    <th>¿Produce Leche?</th>
+                    <th>¿Produce Cereales?</th>
+                    <th>¿Produce Frutas?</th>
+                    <th>¿Produce Verduras?</th>
+                    <th>ID del Propietario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="finca : ${fincas}">
+                    <td th:text="${finca.nombre}"></td>
+                    <td th:text="${finca.numHectareas}"></td>
+                    <td th:text="${finca.metrosCuadrados}"></td>
+                    <td th:text="${finca.propietario}"></td>
+                    <td th:text="${finca.capataz}"></td>
+                    <td th:text="${finca.pais}"></td>
+                    <td th:text="${finca.departamento}"></td>
+                    <td th:text="${finca.ciudad}"></td>
+                    <td th:text="${finca.siProduceLeche}"></td>
+                    <td th:text="${finca.siProduceCereales}"></td>
+                    <td th:text="${finca.siProduceFrutas}"></td>
+                    <td th:text="${finca.siProduceVerduras}"></td>
+                    <td th:text="${finca.propietarioId}"></td>
+                    <td>
+                        <a th:href="@{/finca/editar/{id}(id=${finca.propietarioId})}"><i class="fas fa-edit"></i></a>
+                        <a th:href="@{/finca/eliminar/{id}(id=${finca.propietarioId})}"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>    
+        <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i>Volver</a>
+    </div>
+
+    <script>
+        document.getElementById("searchButton").addEventListener("click", function() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementsByTagName("table")[0];
+            tr = table.getElementsByTagName("tr");
+        
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

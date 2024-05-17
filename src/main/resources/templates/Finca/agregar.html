@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Finca</title>
+    <link th:href="@{/css/agregar.css}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Finca</h1>
+
+        <!-- Formulario para agregar una nueva finca -->
+        <form action="/finca/agregar" method="post">
+			<div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="numhectareas">Número de Hectáreas:</label>
+                <input type="number" id="numhectareas" name="numhectareas" required>
+            </div>
+            <div class="form-group">
+                <label for="metroscuadrados">Metros Cuadrados:</label>
+                <input type="number" id="metroscuadrados" name="metroscuadrados" required>
+            </div>
+            <div class="form-group">
+                <label for="propietario">Propietario:</label>
+                <input type="text" id="propietario" name="propietario" required>
+            </div>
+            <div class="form-group">
+                <label for="capataz">Capataz:</label>
+                <input type="text" id="capataz" name="capataz" required>
+            </div>
+            <div class="form-group">
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" required>
+            </div>
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" name="departamento" required>
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+            </div>
+            <div class="form-group">
+                <label for="si_Produce_Leche">¿Produce Leche?</label>
+                <select id="si_Produce_Leche" name="si_Produce_Leche" required>
+                    <option value=""></option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="si_Produce_Cereales">¿Produce Cereales?</label>
+                <select id="si_Produce_Cereales" name="si_Produce_Cereales" required>
+                    <option value=""></option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="si_Produce_Frutas">¿Produce Frutas?</label>
+                <select id="si_Produce_Frutas" name="si_Produce_Frutas" required>
+                    <option value=""></option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="si_Produce_Verduras">¿Produce Verduras?</label>
+                <select id="si_Produce_Verduras" name="si_Produce_Verduras" required>
+                    <option value=""></option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="propietarioId">ID del Propietario:</label>
+                <input type="text" id="propietarioId" name="propietarioId" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar Finca">
+            </div>
+        </form>
+
+        <!-- Botón para volver atrás -->
+        <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i>Volver</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Propietarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link th:href="@{/css/listarP.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listado de Propietarios</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Clave</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>FechaNacimiento</th>
+                    <th>Género</th>
+                    <th>Email</th>
+                    <th>telefono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="propietario : ${propietarios}">
+                    <td th:text="${propietario.id}"></td>
+                    <td th:text="${propietario.clave}"></td>
+                    <td th:text="${propietario.nombre}"></td>
+                    <td th:text="${propietario.apellido}"></td>
+                    <td th:text="${propietario.fechanacimiento}"></td>
+                    <td th:text="${propietario.genero}"></td>
+                    <td th:text="${propietario.email}"></td>
+                    <td th:text="${propietario.telefono}"></td>
+                    <td>
+                        <a th:href="@{/propietario/editar/{id}(id=${propietario.id})}" class="btn-editar"><i class="fas fa-edit"></i></a>
+                        <a th:href="@{/propietario/eliminar/{id}(id=${propietario.id})}" class="btn-eliminar"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" onclick="window.history.back();" class="btn-atras"><i class="fas fa-arrow-left"></i>Volver</a>
+        <div class="text-center">
+            <a href="/" class="btn"><i class="fas fa-home"></i> Ir a Inicio</a>
+        </div>
+    </div>
+</body>
+</html>

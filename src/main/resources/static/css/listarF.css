@@ -1,0 +1,92 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8e8e8; /* Color de fondo ligeramente más claro */
+}
+
+.container {
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    top: 5%; /* 50% menos 45% de la altura total */
+    left: 5%; /* 50% menos 45% del ancho total */
+    margin: auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Agregado para que el contenido pueda hacer scroll si es necesario */
+}
+
+h1 {
+    font-size: 28px; /* Aumentado el tamaño del título */
+    margin-bottom: 30px; /* Aumentada la distancia inferior */
+    text-align: center;
+    color: #333333; /* Color de texto más oscuro */
+}
+
+.search-container {
+    margin-bottom: 30px; /* Aumentada la distancia inferior */
+    display: flex;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px; /* Aumentado el relleno */
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #aaaaaa; /* Borde más claro */
+    font-size: 16px; /* Aumentado el tamaño de fuente */
+}
+
+#searchButton {
+    padding: 12px 20px; /* Aumentado el relleno */
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: #ffffff; /* Color de texto blanco */
+    font-size: 18px; /* Aumentado el tamaño de fuente */
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px; /* Aumentada la distancia inferior */
+}
+
+table th, table td {
+    padding: 12px; /* Aumentado el relleno */
+    border: 1px solid #dddddd; /* Borde más claro */
+    text-align: center;
+}
+
+table th {
+    background-color: #f0f0f0; /* Color de fondo ligeramente más claro */
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fila ligeramente más claro */
+}
+
+table tr:hover {
+    background-color: #f5f5f5; /* Color de fila al pasar el mouse */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px; /* Aumentada la distancia superior */
+    padding: 12px 20px; /* Aumentado el relleno */
+    background-color: #ff6347; /* Color de fondo rojo */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* Color de texto blanco */
+    font-size: 16px; /* Aumentado el tamaño de fuente */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-button i {
+    margin-right: 8px; /* Aumentado el espacio entre el icono y el texto */
+}

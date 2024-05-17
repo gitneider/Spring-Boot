@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Finca</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link th:href="@{/css/editarF.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Finca</h1>
+        <form th:action="@{/finca/editar}" th:object="${finca}" method="post">
+            <input type="hidden" th:field="*{propietarioId}">
+            
+            <label><i class="fas fa-tag"></i>Nombre:</label>
+            <input type="text" th:field="*{nombre}" required>
+            
+            <label><i class="fas fa-ruler"></i>Número de Hectáreas:</label>
+            <input type="text" th:field="*{numHectareas}" required>
+            
+            <label><i class="fas fa-ruler-combined"></i>Metros Cuadrados:</label>
+            <input type="text" th:field="*{metrosCuadrados}" required>
+            
+            <label><i class="fas fa-user"></i>Propietario:</label>
+            <input type="text" th:field="*{propietario}" required>
+            
+            <label><i class="fas fa-hard-hat"></i>Capataz:</label>
+            <input type="text" th:field="*{capataz}" required>
+            
+            <label><i class="fas fa-globe"></i>País:</label>
+            <input type="text" th:field="*{pais}" required>
+            
+            <label><i class="fas fa-map-marker-alt"></i>Departamento:</label>
+            <input type="text" th:field="*{departamento}" required>
+            
+            <label><i class="fas fa-city"></i>Ciudad:</label>
+            <input type="text" th:field="*{ciudad}" required>
+            
+            <label><i class="fas fa-check"></i>¿Produce Leche?</label>
+            <input type="text" th:field="*{siProduceLeche}" required>
+            
+            <label><i class="fas fa-check"></i>¿Produce Cereales?</label>
+            <input type="text" th:field="*{siProduceCereales}" required>
+            
+            <label><i class="fas fa-check"></i>¿Produce Frutas?</label>
+            <input type="text" th:field="*{siProduceFrutas}" required>
+            
+            <label><i class="fas fa-check"></i>¿Produce Verduras?</label>
+            <input type="text" th:field="*{siProduceVerduras}" required>
+            
+            <label><i class="fas fa-id-card"></i>ID del Propietario:</label>
+            <input type="text" th:field="*{propietarioId}" required>
+            
+            <div class="buttons">
+                <input type="submit" value="Actualizar Finca">
+                <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i>Volver</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

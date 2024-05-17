@@ -1,0 +1,88 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea; /* Cambiado el color de fondo */
+}
+
+.container {
+    max-width: 500px; /* Ampliado el ancho del contenedor */
+    margin: 50px auto; /* Aumentada la distancia superior e inferior */
+    padding: 30px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
+
+h1 {
+    font-size: 28px; /* Aumentado el tamaño del título */
+    margin-bottom: 30px; /* Aumentada la distancia inferior */
+    text-align: center;
+    color: #333333; /* Color de texto más oscuro */
+}
+
+form div {
+    margin-bottom: 20px; /* Aumentada la distancia entre elementos */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px; /* Reducida la distancia inferior */
+    color: #555555; /* Color de texto más oscuro */
+}
+
+input[type="date"],
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px; /* Aumentado el relleno */
+    border-radius: 6px; /* Redondeado los bordes */
+    border: 1px solid #aaaaaa; /* Borde más claro */
+    font-size: 16px; /* Aumentado el tamaño de fuente */
+    color: #333333; /* Color de texto más oscuro */
+}
+
+input[type="submit"] {
+    padding: 12px 20px; /* Aumentado el relleno */
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none;
+    border-radius: 6px; /* Redondeado los bordes */
+    color: #ffffff; /* Color de texto blanco */
+    font-size: 18px; /* Aumentado el tamaño de fuente */
+    cursor: pointer;
+}
+
+.message-container {
+    display: none;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.error-message {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+.back-button {
+    display: inline-block; /* Cambiado a mostrar en línea */
+    margin-top: 20px;
+    padding: 12px 20px; /* Aumentado el relleno */
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none;
+    border-radius: 6px; /* Redondeado los bordes */
+    color: #ffffff; /* Color de texto blanco */
+    font-size: 16px; /* Aumentado el tamaño de fuente */
+    text-decoration: none;
+    text-align: center;
+}
+
+.back-button i {
+    margin-right: 8px;
+}

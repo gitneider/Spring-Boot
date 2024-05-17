@@ -1,0 +1,129 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333333;
+}
+
+input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button,
+.go-home-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons input[type="submit"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.buttons .back-button {
+    flex-shrink: 0;
+}
+
+/* Iconos */
+i {
+    margin-right: 8px;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Estilos para los botones de editar */
+.save-button {
+    background-color: #ffc107;
+}
+
+.go-home-button {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* Estilos específicos para los botones de editar */
+.edit-buttons {
+    margin-top: 20px;
+}
+
+.edit-buttons .save-button,
+.edit-buttons .back-button,
+.edit-buttons .go-home-button {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Opcional: Estilos específicos para el botón de volver */
+.edit-buttons .back-button {
+    background-color: #007bff;
+    color: #ffffff;
+}
